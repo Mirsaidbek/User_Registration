@@ -1,0 +1,46 @@
+spring:
+  profiles:
+    active:
+      - dev
+  datasource:
+    url: jdbc:postgresql://localhost:....
+    username: postgres
+    password: 123
+    driverClassName: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: update
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    username: ....
+    password: ....
+    port: 465
+  properties:
+    smtp:
+      auth: true
+      starttls:
+        enable: true
+  freemarker:
+    template-loader-path: classpath:/
+
+---
+#
+#spring:
+#  config:
+#    activate:
+#      on-profile: dev
+#  task:
+#    execution:
+#      thread-name-prefix: adash-dev-
+#  mail:
+#    host: sandbox.smtp.mailtrap.io
+#    username: b74a560f90ca6b
+#    password: 947d761c11488c
+#    port: 587
+#    properties:
+#      smtp:
+#        auth: true
+#        starttls:
+#          enable: true
+#  freemarker:
+#    template-loader-path: classpath:/
